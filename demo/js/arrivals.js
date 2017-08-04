@@ -93,11 +93,11 @@ var Arrivals = (function() {
     return {
         loadData: function() {
             // retrieve all routes
-            document.querySelector(".arrivals-list").classList.add('loading')
+            document.querySelector("body").classList.add('loading')
             arrivalController.getAll().then(function(response) {
                 // bind the arrivals to the UI
                 Page.vm.arrivals(response);
-                document.querySelector(".arrivals-list").classList.remove('loading')
+                document.querySelector("body").classList.remove('loading')
             });
         }
     }
