@@ -382,8 +382,22 @@ header h3 {
     padding: 0 0.5em;
 }
 
-.arrivals-list.loading {
-    opacity: 0.2;
+.loading::after {
+    background-color:  #4285f4;
+	position: fixed;
+	left: 0;
+	right:0;
+	top: 0;
+	bottom:0;
+	content: "";
+}
+.loading::before{
+	content: "Loading...";
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	color: #fff;
+	z-index: 9999;
 }
 
 #main {
