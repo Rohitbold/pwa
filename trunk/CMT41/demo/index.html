@@ -15,19 +15,20 @@
 <body>
     <header>
         <div class="content">
-            <h3>Arrivals</h3>
+            <h3>News form around the world</h3>
         </div>
     </header>
     <div class="container">
         <div id="main" class="content">
             <ul class="arrivals-list" data-bind="foreach: arrivals">
                 <li class="item">
+				<a data-bind="attr:{href: url}">
 				<img class="image" data-bind="attr:{src: urlToImage}">
-                    <span class="title" data-bind="html: title"></span>
-                    <span class="status" data-bind="html: author"></span>
+                    <h3 class="title" data-bind="html: title"></h3>
                     <span class="time" data-bind="html: description"></span>
-					<span class="time" data-bind="html: url"></span>
-					<span class="time" data-bind="html: publishedAt"></span>
+					<p>By: <span class="status" data-bind="html: author"></span> at <span class="time" data-bind="html: publishedAt"></span></p>
+					
+					</a>
                 </li>
             </ul>
         </div>
